@@ -1,0 +1,36 @@
+# =========================================================
+# ATS AI Engine — Python Dependencies
+# =========================================================
+
+# --- UI Prototyping & Dashboard ---
+streamlit>=1.35.0          # Verified on 1.58.0
+
+# --- Configuration & Environment ---
+python-dotenv>=1.0.0      # Verified on 1.2.2
+
+# --- Document Parsing (PDF & Word) ---
+PyMuPDF>=1.24.0            # Verified on 1.27.2.3 (fitz)
+python-docx>=1.1.0         # Verified on 1.2.0
+
+# --- NLP & Text Cleaning ---
+spacy>=3.7.0               # Verified on 3.8.14
+nltk>=3.8.0                # Verified on 3.9.4
+
+# --- Sparse Scoring (BM25) ---
+rank-bm25>=0.2.2           # Verified on 0.2.2
+
+# --- Dense & Semantic Scoring (ML / Math) ---
+sentence-transformers>=3.0.0 # Verified on 5.5.1
+scikit-learn>=1.4.0        # Verified on 1.8.0
+numpy>=1.24.0              # Verified on 2.4.6
+torch>=2.0.0               # Verified on 2.12.0
+
+# --- Visualization ---
+plotly>=5.22.0             # Verified on 6.7.0
+
+# --- API Layer (Phase 4 — FastAPI) ---
+fastapi>=0.111.0           # Verified on 0.136.3
+uvicorn[standard]>=0.29.0  # Verified on 0.48.0
+python-multipart>=0.0.9    # Verified on 0.0.29
+pydantic>=2.7.0            # Verified on 2.13.4
+

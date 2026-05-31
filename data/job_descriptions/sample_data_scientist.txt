@@ -1,0 +1,44 @@
+Senior Data Scientist — AI/ML Platform Team
+
+About the Role
+We are looking for a Senior Data Scientist to join our AI/ML Platform team.
+You will design, build, and deploy machine learning models and data pipelines
+that power our core product features. You'll collaborate closely with product,
+engineering, and analytics teams to translate business problems into
+data-driven solutions.
+
+Key Responsibilities
+- Design and implement end-to-end machine learning pipelines (data ingestion,
+  feature engineering, model training, evaluation, deployment)
+- Build and maintain NLP models for text classification, information extraction,
+  and semantic search
+- Develop and optimize recommendation systems and ranking algorithms
+- Collaborate with MLOps engineers to deploy models to production using Docker
+  and Kubernetes
+- Write clean, well-documented Python code following software engineering best practices
+- Mentor junior data scientists and conduct code reviews
+- Communicate complex findings and model results to non-technical stakeholders
+
+Required Skills & Qualifications
+- 5+ years of professional experience in data science or machine learning
+- Proficiency in Python (pandas, numpy, scikit-learn, PyTorch or TensorFlow)
+- Deep expertise in NLP: transformers, BERT, spaCy, tokenization, embeddings
+- Experience with LLM fine-tuning, RAG architectures, and prompt engineering
+- Solid SQL and NoSQL database experience (PostgreSQL, MongoDB, BigQuery)
+- Experience with cloud platforms: AWS (SageMaker, S3, Lambda) or GCP (Vertex AI)
+- Familiarity with MLOps tools: MLflow, DVC, Airflow, Docker, Kubernetes
+- Strong communication and presentation skills
+- Degree in Computer Science, Statistics, Mathematics, or related field
+
+Nice to Have
+- Experience with distributed computing: Apache Spark, Dask
+- Knowledge of A/B testing and causal inference
+- FastAPI or Flask for model serving
+- Contributions to open-source ML projects
+- Experience with data visualization tools (Tableau, Power BI, Plotly)
+
+What We Offer
+- Competitive salary and equity package
+- Remote-first culture with flexible working hours
+- Annual learning budget for conferences, courses, and certifications
+- Collaborative, diverse, and inclusive team environment

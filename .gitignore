@@ -1,0 +1,74 @@
+# =========================================================
+# ATS AI Engine — Git Ignore Configuration
+# =========================================================
+
+# --- Secrets & Local Configs ---
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# --- Python Bytecode & Runtime ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# --- Virtual Environments ---
+venv/
+.venv/
+env/
+.env/
+ENV/
+env.bak/
+venv.bak/
+
+# --- IDEs & Editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# --- OS Specific Files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.AppleDouble
+.LSOverride
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# --- ML & NLP Model Caches ---
+.cache/
+models/
+sentence_transformers_cache/
+huggingface/
+nltk_data/
+spacy_data/
+
+# --- User Data & Uploaded Resumes ---
+# Exclude all raw documents to prevent accidental leaks of PII
+data/resumes/*.pdf
+data/resumes/*.docx
+data/resumes/*.doc
+data/resumes/*.txt
+
+# Allow committing folder structures via .gitkeep
+!data/resumes/.gitkeep
+!data/job_descriptions/.gitkeep
+
+# --- Logs & Diagnostics ---
+*.log
+logs/
+install_log.txt
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
