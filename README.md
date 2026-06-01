@@ -6,7 +6,6 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.35+-FF4B4B?style=flat&logo=streamlit&logoColor=white)](https://streamlit.io)
 [![NLP](https://img.shields.io/badge/spaCy-v3.7-09A3D5?style=flat&logo=spacy&logoColor=white)](https://spacy.io)
 [![Transformers](https://img.shields.io/badge/Sentence--Transformers-all--MiniLM--L6--v2-blueviolet?style=flat)](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
-[![License: MIT](https://img.shields.io/badge/License-MIT-00d4b4?style=flat)](LICENSE)
 
 A beautiful, professional, production-ready **Applicant Tracking System (ATS) AI Engine** that evaluates how well a candidate's resume matches a job description using an advanced hybrid scoring pipeline.
 
@@ -221,7 +220,3 @@ We value clean code, high performance, and mathematical soundness. When contribu
 3.  Do not commit credentials, `.env` configurations, or actual test resumes (covered under `.gitignore`).
 
 ---
-
-## 📄 License
-
-Distributed under the [MIT](LICENSE) License. Free for commercial, personal, and educational use.
