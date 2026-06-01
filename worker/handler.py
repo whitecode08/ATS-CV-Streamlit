@@ -1,4 +1,3 @@
-import json
 import logging
 
 from src.config import config
@@ -41,6 +40,35 @@ def process(body: dict) -> dict:
     )
 
     return result.to_dict()
+
+
+def build_payload(job_id: str, result: dict) -> dict:
+    """Build the camelCase result payload for the AMQP result queue."""
+    label = result.get("score_label", "")
+    pct = result.get("hybrid_percentage", 0.0)
+    missing = result.get("missing_keywords", [])
+
+    feedback = f"Your resume is a {label} with a {pct:.1f}% compatibility score."
+
+    suggestions = [
+        f"Consider adding '{kw}' to better align with the job description."
+        for kw in missing[:5]
+    ]
+    if not suggestions:
+        suggestions = ["Your resume covers the key requirements well."]
+
+    return {
+        "id": job_id,
+        "result": {
+            "sparseScore": result.get("sparse_score", 0.0),
+            "denseScore": result.get("dense_score", 0.0),
+            "hybridScore": result.get("hybrid_score", 0.0),
+            "matchedKeywords": result.get("matched_keywords", []),
+            "missingKeywords": missing,
+            "feedback": feedback,
+            "suggestions": suggestions,
+        }
+    }
 
 
 def print_result(job_id: str, result: dict) -> None:

@@ -1,5 +1,5 @@
 """
-AMQP consumer — listens on `ats_check_queue`, scores resumes, prints to console.
+AMQP consumer — listens on `ats_check_queue`, scores resumes, prints to console, publishes to `ats_check_result`.
 
 Run with:
     python -m worker.consumer
@@ -12,7 +12,7 @@ import sys
 import pika
 
 from src.config import config
-from worker import handler
+from worker import handler, publisher
 
 logging.basicConfig(
     level=logging.INFO,
@@ -26,11 +26,13 @@ def on_message(ch, method, _properties, body):
     job_id = "(unknown)"
     try:
         payload = json.loads(body)
-        job_id = payload.get("job_id", job_id)
+        job_id = payload.get("id") or payload.get("job_id") or job_id
 
         handler.validate(payload)
         result = handler.process(payload)
         handler.print_result(job_id, result)
+
+        publisher.publish(ch, handler.build_payload(job_id, result))
 
         ch.basic_ack(delivery_tag=method.delivery_tag)
 

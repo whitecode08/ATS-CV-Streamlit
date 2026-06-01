@@ -34,7 +34,8 @@ class Config:
     AMQP_URL: str      = os.getenv("AMQP_URL", "amqp://localhost:5672")
     AMQP_USERNAME: str = os.getenv("AMQP_USERNAME", "guest")
     AMQP_PASSWORD: str = os.getenv("AMQP_PASSWORD", "guest")
-    AMQP_QUEUE: str    = os.getenv("AMQP_QUEUE", "ats_check_queue")
+    AMQP_QUEUE: str        = os.getenv("AMQP_QUEUE", "ats_check_queue")
+    AMQP_RESULT_QUEUE: str = os.getenv("AMQP_RESULT_QUEUE", "ats_check_result")
 
     # ── CDN / Object Storage ─────────────────────────────────────────────────
     S3_ENDPOINT: str   = os.getenv("S3_ENDPOINT", "")
