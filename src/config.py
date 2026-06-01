@@ -20,7 +20,7 @@ class Config:
     ALPHA_WEIGHT: float = float(os.getenv("ALPHA_WEIGHT", "0.5"))
 
     # ── Model Names ───────────────────────────────────────────────────────────
-    SENTENCE_MODEL: str = os.getenv("SENTENCE_MODEL", "all-MiniLM-L6-v2")
+    SENTENCE_MODEL: str = os.getenv("SENTENCE_MODEL", "paraphrase-multilingual-MiniLM-L12-v2")
     SPACY_MODEL: str = os.getenv("SPACY_MODEL", "en_core_web_sm")
 
     # ── Paths ─────────────────────────────────────────────────────────────────

@@ -25,7 +25,7 @@ import os
 # Add project root to path for relative imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
-from src.nlp.cleaner import tokenize, extract_keyword_overlap
+from src.nlp.cleaner import tokenize, tokenize_with_pos, extract_keyword_overlap
 from src.nlp.entity_tagger import extract_entities, ExtractedEntities
 from src.scoring.sparse_bm25 import bm25_raw_score, bm25_normalized_score, get_top_matching_terms
 from src.scoring.dense_vector import dense_score
@@ -190,9 +190,9 @@ def run_scoring(
     """
     result = ScoringResult(alpha=alpha)
 
-    # ── Step 1: Tokenize ──────────────────────────────────────────────────
-    resume_tokens = tokenize(resume_text)
-    jd_tokens = tokenize(jd_text)
+    # ── Step 1: Tokenize (POS-aware with noun filtering when spaCy available) ─
+    resume_tokens = tokenize_with_pos(resume_text)
+    jd_tokens = tokenize_with_pos(jd_text)
 
     # ── Step 2: BM25 Sparse Score ─────────────────────────────────────────
     # Get raw unbounded BM25 score

@@ -72,3 +72,6 @@ install_log.txt
 htmlcov/
 .tox/
 
+# --- Docs & Output ---
+docs/
+output/

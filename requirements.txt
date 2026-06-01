@@ -15,6 +15,7 @@ python-docx>=1.1.0         # Verified on 1.2.0
 # --- NLP & Text Cleaning ---
 spacy>=3.7.0               # Verified on 3.8.14
 nltk>=3.8.0                # Verified on 3.9.4
+python-dateutil>=2.8.0     # Fuzzy date parsing for experience calculator
 
 # --- Sparse Scoring (BM25) ---
 rank-bm25>=0.2.2           # Verified on 0.2.2
