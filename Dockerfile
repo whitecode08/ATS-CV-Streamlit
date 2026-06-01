@@ -1,8 +1,8 @@
 FROM python:3.11-slim
 
 WORKDIR /app
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.worker.txt .
+RUN pip install --no-cache-dir -r requirements.worker.txt
 
 # Download spaCy + sentence-transformers models at build time
 RUN python -m spacy download en_core_web_sm
