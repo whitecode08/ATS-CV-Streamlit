@@ -1,0 +1,28 @@
+# =========================================================
+# ATS Worker — Lean Dependencies (no UI / API)
+# =========================================================
+
+# --- Configuration & Environment ---
+python-dotenv>=1.0.0
+
+# --- Document Parsing (PDF & Word) ---
+PyMuPDF>=1.24.0
+python-docx>=1.1.0
+
+# --- NLP & Text Cleaning ---
+spacy>=3.7.0
+nltk>=3.8.0
+python-dateutil>=2.8.0
+
+# --- Sparse Scoring (BM25) ---
+rank-bm25>=0.2.2
+
+# --- Dense & Semantic Scoring ---
+sentence-transformers>=3.0.0
+scikit-learn>=1.4.0
+numpy>=1.24.0
+torch>=2.0.0
+
+# --- AMQP Worker ---
+pika>=1.3.0
+requests>=2.31.0
