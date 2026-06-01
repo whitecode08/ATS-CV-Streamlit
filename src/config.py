@@ -30,6 +30,18 @@ class Config:
     JD_DIR: Path = _root / "data" / "job_descriptions"
     TAXONOMY_DIR: Path = _root / "data" / "taxonomy"
 
+    # ── AMQP (RabbitMQ) ──────────────────────────────────────────────────────
+    AMQP_URL: str      = os.getenv("AMQP_URL", "amqp://localhost:5672")
+    AMQP_USERNAME: str = os.getenv("AMQP_USERNAME", "guest")
+    AMQP_PASSWORD: str = os.getenv("AMQP_PASSWORD", "guest")
+    AMQP_QUEUE: str    = os.getenv("AMQP_QUEUE", "ats_check_queue")
+
+    # ── CDN / Object Storage ─────────────────────────────────────────────────
+    S3_ENDPOINT: str   = os.getenv("S3_ENDPOINT", "")
+
+    # ── Worker Scoring Defaults ───────────────────────────────────────────────
+    EXTRACT_NER: bool  = os.getenv("EXTRACT_NER", "true").lower() == "true"
+
     # ── Optional API Keys ─────────────────────────────────────────────────────
     OPENAI_API_KEY: str | None = os.getenv("OPENAI_API_KEY")
 
